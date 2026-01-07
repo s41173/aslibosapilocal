@@ -1,0 +1,780 @@
+{
+	"info": {
+		"_postman_id": "6333d02a-a98d-40c3-90a3-f328bb250fa0",
+		"name": "ASLIBOS-LOCAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1096731"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "{{url}}main/sync",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{urllocal}}main/sync/",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"sync",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/reset",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{msilocal}}main/reset",
+							"host": [
+								"{{msilocal}}main"
+							],
+							"path": [
+								"reset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/ping",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{msilocal}}main/ping",
+							"host": [
+								"{{msilocal}}main"
+							],
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CAMERA",
+			"item": [
+				{
+					"name": "{{url}}main/start_camera",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{express}}main/start_camera",
+							"host": [
+								"{{express}}main"
+							],
+							"path": [
+								"start_camera"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/stop_camera",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{express}}main/stop_camera/",
+							"host": [
+								"{{express}}main"
+							],
+							"path": [
+								"stop_camera",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/status_camera",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{urllocal}}main/status_camera/",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"status_camera",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEVICE LOGIN",
+			"item": [
+				{
+					"name": "QC",
+					"item": [
+						{
+							"name": "{{url}}/main/login_qc",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "otp",
+											"value": "980207",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{urllocal}}main/login_qc",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"login_qc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/main/login_qc2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "otp",
+											"value": "980207",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "product",
+											"value": "91",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{urllocal}}main/login_qc_2",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"login_qc_2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/main/logout_qc",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urllocal}}main/logout_qc",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"logout_qc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/main/finish_produksi",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urllocal}}main/finish_produksi",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"finish_produksi"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}get_last",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urllocal}}main/get_last",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"get_last"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}main/rollback",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urllocal}}main/rollback",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"rollback"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "SCANNER",
+					"item": [
+						{
+							"name": "{{url}}/main/login_scanner",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "otp",
+											"value": "943926",
+											"type": "text"
+										},
+										{
+											"key": "otp_top",
+											"value": "943926",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "otp_bot",
+											"value": "943751",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{urllocal}}main/login_scanner",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"login_scanner"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/main/logout_scanner",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urllocal}}main/logout_scanner/",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"logout_scanner",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/main/decode_scanner",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{urllocal}}main/decode_scanner",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"decode_scanner"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/main/scan",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "code",
+											"value": "W9QC99SG3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{urllocal}}main/scan",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"scan"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "{{url}}/main/post_barcode",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									},
+									{
+										"key": "{{token}}",
+										"value": "{{tokenvalue}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "code",
+											"value": "EBM96SLUP",
+											"type": "text"
+										},
+										{
+											"key": "userfile",
+											"type": "file",
+											"src": "/Users/jaykiran/Desktop/5570fc91-4dcb-4da2-aabf-c53448d1f2fe.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{urllocal}}main/post_barcode",
+									"host": [
+										"{{urllocal}}main"
+									],
+									"path": [
+										"post_barcode"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "RESET FUNCTION",
+			"item": [
+				{
+					"name": "{{url}}main/reset",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{urllocal}}main/reset",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"reset"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}add_barcode",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "W9QC99SG3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{serverlocal}}main/add_barcode",
+							"host": [
+								"{{serverlocal}}main"
+							],
+							"path": [
+								"add_barcode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SPA",
+			"item": [
+				{
+					"name": "{{url}}/main/login_spa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "otp",
+									"value": "396794",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{urllocal}}main/login_spa",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"login_spa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/barcode_list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\": 10,\n    \"offset\": 0,\n    \"usedtop\": \"\",\n    \"usedbot\": \"\",\n    \"sides\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urllocal}}main/barcode_list",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"barcode_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}configuration",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{msilocal}}main/configuration/396794",
+							"host": [
+								"{{msilocal}}main"
+							],
+							"path": [
+								"configuration",
+								"396794"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{urllocal}}main/product/1",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/produksi",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{urllocal}}main/produksi",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"produksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{url}}main/history",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{token}}",
+								"value": "{{tokenvalue}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\": 10,\n    \"offset\": 0,\n    \"produksi\": \"\",\n    \"sync\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urllocal}}main/history",
+							"host": [
+								"{{urllocal}}main"
+							],
+							"path": [
+								"history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
